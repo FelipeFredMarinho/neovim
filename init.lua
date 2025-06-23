@@ -11,5 +11,5 @@ vim.cmd("set shiftwidth=2")
 require("config")
 -- require("plugins")
 
-vim.cmd("colorscheme industry")
+vim.cmd("colorscheme solarized-osaka")
 
