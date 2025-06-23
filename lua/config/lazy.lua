@@ -25,7 +25,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- import your plugins
---    { import = "plugins.colorscheme" },
+    { import = "plugins.colorschemes" },
     { import = "plugins.telescope" },
     { import = "plugins.plenary" },
     { import = "plugins.telescope-fzf-native" },
@@ -36,4 +36,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+vim.cmd.colorscheme("solarized-osaka")
 
