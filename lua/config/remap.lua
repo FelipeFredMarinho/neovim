@@ -13,6 +13,10 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visua
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moves lines up in visual selection" })
 
 
+-- LSP
+--vim.keymap.set("n", "<leader>fmt", )
+
+
 -- Telescope
 local tl_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-f><C-f>", tl_builtin.find_files, {})
