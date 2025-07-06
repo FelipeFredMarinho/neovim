@@ -1,20 +1,20 @@
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" }
-      }
-    }
-  }
-})
-
-vim.lsp.enable({
-  "bashls",
---  "gopls",
-  "lua_ls",
---  "pyright",
---  "rust-analyzer",
-})
+--vim.lsp.config("lua_ls", {
+--  settings = {
+--    Lua = {
+--      diagnostics = {
+--        globals = { "vim" }
+--      }
+--    }
+--  }
+--})
+--
+--vim.lsp.enable({
+--  "bashls",
+----  "gopls",
+--  "lua_ls",
+----  "pyright",
+----  "rust-analyzer",
+--})
 
 vim.diagnostic.config({
   virtual_lines = true,
