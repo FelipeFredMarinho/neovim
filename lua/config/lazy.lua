@@ -33,7 +33,7 @@ require("lazy").setup({
     { import = "plugins.telescope-fzf-native" },
     { import = "plugins.nvim-treesitter" },
     { import = "plugins.lsp" },
-    { import = "plugins.autocomplete.blink-cmp" },
+    { import = "plugins.autocomplete.nvim-cmp" },
     { import = "plugins.gitsigns" },
   },
   -- Configure any other settings here. See the documentation for more details.
