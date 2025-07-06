@@ -2,7 +2,8 @@ return {
   "neovim/nvim-lspconfig",
   VeryLazy = true,
   dependencies = {
-  "saghen/blink.cmp",
+  --"saghen/blink.cmp",
+  "hrsh7th/nvim-cmp",
   --            { "", config = true },
   },
   event = { "BufReadPre", "BufNewFile" },
