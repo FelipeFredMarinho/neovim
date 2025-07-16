@@ -19,3 +19,8 @@ local tl_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-f><C-f>", tl_builtin.find_files, {})
 vim.keymap.set("n", "<C-l><C-g>", tl_builtin.live_grep, {})
 
+
+-- neo-tree
+vim.keymap.set("n", "<leader>n", ":Neotree left<CR>")
+vim.keymap.set("n", "<leader>nf", ":Neotree float<CR>")
+vim.keymap.set("n", "<leader>nb", ":Neotree buffers<CR>")
