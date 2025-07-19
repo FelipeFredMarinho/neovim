@@ -27,6 +27,7 @@ require("lazy").setup({
     -- import your plugins
     { import = "plugins.colorschemes.solarized-osaka" },
     { import = "plugins.neo-tree" },
+    { import = "plugins.lualine" },
     { import = "plugins.telescope" },
     { import = "plugins.plenary" },
     { import = "plugins.telescope-fzf-native" },
