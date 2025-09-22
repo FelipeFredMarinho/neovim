@@ -98,11 +98,14 @@ return {
     },
   },
   config = function(_, opts)
-    local lspconfig = require('lspconfig')
+    for server, server_opts in pairs(opts.servers) do
+      local capabilities = require('cmp_nvim_lsp').default_capabilities(server_opts.capabilities or vim.lsp.protocol.make_client_capabilities())
 
-    for server, config in pairs(opts.servers) do
-      config.capabilities = require('cmp_nvim_lsp').default_capabilities(config.capabilities)
-      lspconfig[server].setup(config)
+      vim.lsp.config[server] = vim.tbl_extend("force", server_opts, {
+        capabilities = capabilities,
+      })
+
+      vim.lsp.enable(server)
     end
   end
 }
