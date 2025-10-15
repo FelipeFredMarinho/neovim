@@ -36,6 +36,7 @@ require("lazy").setup({
     { import = "plugins.none-ls" },
     { import = "plugins.autocomplete.nvim-cmp" },
     { import = "plugins.gitsigns" },
+    --{ import = "plugins.ai.augment" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
