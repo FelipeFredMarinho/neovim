@@ -6,8 +6,5 @@ return {
   opts = {
     transparent = true
   },
-  init = function()
-    vim.cmd.colorscheme("solarized-osaka")
-  end
 }
 

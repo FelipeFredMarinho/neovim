@@ -6,8 +6,9 @@ return {
 
     }
   },
-  init = function()
-    vim.cmd.colorscheme("monokai")
-  end
+--  init = function()
+--    vim.defer_fn(function()
+--    end, 1)
+--  end
 }
 

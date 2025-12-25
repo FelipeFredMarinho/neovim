@@ -1,6 +1,12 @@
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
+    --{
+    --  "igorlfs/nvim-dap-view",
+    --    ---@module 'dap-view'
+    --    ---@type dapview.Config
+    --    opts = {},
+    --},
     {
       "rcarriga/nvim-dap-ui",
       keys = {
@@ -42,7 +48,8 @@ return {
       --require("dap").toggle_breakpoint,
     },
     { "<F6>", ":DapContinue<CR>" },--require("dap").continue, },
-    { "<leader>dt", ":DapTerminate<CR>" },
+    { "<leader>dC", ":DapContinue<CR>" },--require("dap").continue, },
+    { "<leader>dT", ":DapTerminate<CR>" },
     { "<leader>di", ":DapStepInto<CR>" },--require("dap").step_into, },
     { "<leader>do", ":DapStepOver<CR>" },--require("dap").step_over, },
     { "<leader>dO", ":DapStepOut<CR>" },--require("dap").step_out, },
@@ -67,27 +74,35 @@ return {
       },
     })
 
-    require("dap-go").setup()
+    require("dap-go").setup {
+      dap_configurations = {
+      },
+      delve = {
+        port = "4747"
+      }
+    }
 
-    -- dap C
+    -- dap C/C++
     dap.adapters.codelldb = {
       type = "executable",
       command = "/home/felipe_marinho/.local/share/nvim/mason/bin/codelldb",
       name = "codelldb",
     }
     dap.configurations.cpp = {
-      name = "launch",
-      type = "codelldb",
-      request = "launch",
-      program = function()
-        return vim.fn.input("path to executable: ", vim.fn.getcwd() .. "/", "file")
-      end,
-      cwd = "${workspacefolder}",
-      stoponentry = false,
-      args = {},
+      {
+        name = "launch",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+          return vim.fn.input("path to executable: ", vim.fn.getcwd() .. "/", "file")
+        end,
+        cwd = vim.fn.getcwd(),
+        stoponentry = false,
+        args = {},
+      }
     }
     dap.configurations.c = dap.configurations.cpp
-    -- dap C
+    -- dap C/C++
     -- dap python
     dap.adapters.python = {
       type = "executable",
