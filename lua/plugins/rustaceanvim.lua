@@ -1,5 +1,6 @@
 return {
   "mrcjkb/rustaceanvim",
+  tag = "v8.0.5", -- Last version for neovim 0.11
   config = function()
     local mason_reg = require("mason-registry")
     local codelldb = mason_reg.get_package("codelldb")
