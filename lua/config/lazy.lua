@@ -32,7 +32,7 @@ require("lazy").setup({
     { import = "plugins.plenary" },
     { import = "plugins.telescope-fzf-native" },
     { import = "plugins.which-key" },
-    { import = "plugins.nvim-treesitter" },
+    { import = "plugins.tree-sitter-manager" },
     { import = "plugins.lsp" },
     { import = "plugins.none-ls" },
     { import = "plugins.autocomplete.nvim-cmp" },
