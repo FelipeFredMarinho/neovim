@@ -39,6 +39,7 @@ require("lazy").setup({
     { import = "plugins.autoclose" },
     --{ import = "plugins.ai.augment" },
     { import = "plugins.dap" },
+    { import = "plugins.rustaceanvim" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
