@@ -1,10 +1,10 @@
 return {
   "hrsh7th/cmp-nvim-lsp",
+  event = { "BufReadPre", "BufNewFile" },
   opts = {
     servers = {
       bashls = {},
       clangd = {},
-      cssls = {},
       gopls = {
         settings = {
           gopls = {
@@ -20,7 +20,6 @@ return {
           }
         }
       },
-      html = {},
       lua_ls = {
         settings = {
           Lua = {

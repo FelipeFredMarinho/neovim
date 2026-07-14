@@ -1,6 +1,5 @@
 return {
   "neovim/nvim-lspconfig",
-  VeryLazy = true,
   dependencies = {
   --"saghen/blink.cmp",
   "hrsh7th/nvim-cmp",

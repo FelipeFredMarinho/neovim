@@ -19,6 +19,8 @@ return {
         null_ls.builtins.formatting.prettier.with({
           extra_args = { "--insert-final-line" },
         }),
+        null_ls.builtins.formatting.black.with({
+        }),
       },
     })
   end,

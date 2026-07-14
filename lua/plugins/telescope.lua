@@ -8,6 +8,11 @@ return {
       file_ignore_patterns = { "node_modules" },
       layout_config = {
         preview_width = 0.6
+      },
+      mappings = {
+        n = {
+          ["dd"] = require('telescope.actions').delete_buffer
+        }
       }
     },
   },
