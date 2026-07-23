@@ -24,5 +24,22 @@ return {
       -- parser_dir = vim.fn.stdpath("data") .. "/site/parser",
       -- query_dir = vim.fn.stdpath("data") .. "/site/queries",
     })
+
+    -- For mdx until it has no tree-sitter
+    -- Register the .mdx extension as its own filetype.
+    vim.filetype.add({ extension = { mdx = "mdx" } })
+
+    -- Tell Neovim's built-in treesitter that "mdx" buffers should be
+    -- parsed and queried as "markdown". This is what makes the query
+    -- files under after/queries/markdown/ apply to .mdx files too.
+    vim.treesitter.language.register("markdown", "mdx")
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "mdx",
+      group = vim.api.nvim_create_augroup("mdx_support", { clear = true }),
+      callback = function(args)
+        vim.treesitter.start(args.buf, "markdown")
+      end,
+    })
   end,
 }
