@@ -42,6 +42,7 @@ require("lazy").setup({
     { import = "plugins.dap" },
     { import = "plugins.rustaceanvim" },
     { import = "plugins.which-key" },
+    { import = "plugins.overseer" },
     -- { import = "plugins.gen" },
   },
   -- Configure any other settings here. See the documentation for more details.
